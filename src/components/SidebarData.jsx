@@ -3,42 +3,43 @@ import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import * as IoIcons from "react-icons/io";
 
+    const classN = 'list-group-item list-group-item-action bg-light';
 export const SidebarData = [
     {
         title: 'Home',
         path: '/',
         icon: <AiIcons.AiFillHome/>,
-        cName: 'nav-text'
+        cName: classN
     },
     {
         title: 'Reporst',
         path: '/reports',
         icon: <IoIcons.IoIosPaper/>,
-        cName: 'nav-text'
+        cName: classN
     },
     {
         title: 'Products',
         path: '/products',
         icon: <FaIcons.FaCartPlus/>,
-        cName: 'nav-text'
+        cName: classN
     },
     {
         title: 'Team',
         path: '/team',
         icon: <IoIcons.IoMdPeople/>,
-        cName: 'nav-text'
+        cName: classN
     },
     {
         title: 'Messages',
         path: '/messages',
         icon: <FaIcons.FaEnvelopeOpenText/>,
-        cName: 'nav-text'
+        cName: classN
     },
     {
         title: 'Support',
         path: '/support',
         icon: <IoIcons.IoMdHelpCircle/>,
-        cName: 'nav-text'
+        cName: classN
     },
 
 ]
