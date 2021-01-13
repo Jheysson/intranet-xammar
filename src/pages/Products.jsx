@@ -2,9 +2,14 @@ import React from 'react'
 
 function Products() {
     return (
-        <div>
-            Products
-        </div>
+        <>
+            <div className="container">
+                <div className="row">
+                Products
+                </div>
+                
+            </div> 
+        </>
     )
 }
 

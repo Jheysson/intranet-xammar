@@ -2,13 +2,21 @@ import React from 'react'
 import * as FaIcons from "react-icons/fa";
 import * as AiIcons from "react-icons/ai";
 import * as IoIcons from "react-icons/io";
+import * as CgIcons from "react-icons/cg";
+import * as BiIcons from "react-icons/bi";
 
-    const classN = 'list-group-item list-group-item-action bg-light';
+    const classN = 'list-group-item list-group-item-action list-group-item-primary';
 export const SidebarData = [
     {
         title: 'Home',
         path: '/',
-        icon: <AiIcons.AiFillHome/>,
+        icon: <CgIcons.CgHome/>,
+        cName: classN
+    },
+    {
+        title: 'Profile',
+        path: '/profile',
+        icon: <CgIcons.CgProfile/>,
         cName: classN
     },
     {
@@ -38,7 +46,7 @@ export const SidebarData = [
     {
         title: 'Support',
         path: '/support',
-        icon: <IoIcons.IoMdHelpCircle/>,
+        icon: <BiIcons.BiHelpCircle/>,
         cName: classN
     },
 
