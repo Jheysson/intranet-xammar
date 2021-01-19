@@ -1,15 +1,15 @@
 import React from 'react'
 
     const classN = '';
-export const SidebarItems = [
+export const SidebarAlumnos = [
     {
-        title: 'Home',
+        title: 'Inicio',
         path: '/',
         icon: 'fas fa-home',
         cName: classN
     },
     {
-        title: 'Profile',
+        title: 'Perfil',
         path: '/profile',
         icon: 'far fa-user-circle',
         cName: classN

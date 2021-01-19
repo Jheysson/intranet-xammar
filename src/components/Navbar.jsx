@@ -3,8 +3,9 @@ import * as FaIcons from "react-icons/fa";
 import * as AaIcons from "react-icons/ai";
 import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 
-import { SidebarData } from './SidebarData';
-import { SidebarItems } from './SidebarItems'
+import { SidebarData } from './SidebarData'
+import { SidebarAlumnos } from './SidebarAlumnos'
+import { SidebarCursos } from './SidebarCursos'
 
 import './NavbarStyles.css';
 import './template-navbar.css';
@@ -17,12 +18,35 @@ import Profile from '../pages/Profile';
 function Navbar() {
 
     const datos_alumno = {
-        nombre: 'Jheysson',
-        apellido: 'Urbano',
-        direccion: 'Psj. Popular 120',
-        urlImagen: 'http://via.placeholder.com/100',
-        texto: 'Lorem15 ipsun dolor sit amet consectetur adipisicing elit.'
-      }
+        
+        apellido: 'Urbano Lino',
+        nombre: 'Jheysson Jesús',
+        cargo: 'Estudiante',
+        correo_institucional: '0333161046@unjfsc.edu.pe',
+        nivel: 'Secundaria',
+        anio: '4to',
+
+        fech_nacimiento: '31-01-99',
+        dni: '96374528',
+        edad: '15',
+        sexo: 'Masculino',
+        tipo_sangre: 'O+',
+        
+        direccion: 'Psj. San Isidro 120',
+        correo_personal: 'jheysson@hotmail.com',
+        telf_fijo: '2345678',
+        telf_pers: '987654321',
+
+        pais: 'Perú',
+        provincia: 'Huaura',
+        domicilio_procedencia: 'Psj. San Isidro 120',
+        departamento: 'Lima',
+        distrito: 'Santa María',
+
+
+        urlImagen: 'http://via.placeholder.com/100'
+    }
+
 
     const [sidebar, setSidebar] = useState(false);
 
@@ -37,7 +61,7 @@ function Navbar() {
             <nav id="sidebar" class="sidebar-wrapper">
                 <div class="sidebar-content">
                     <div class="sidebar-brand">
-                        <a href="#">pro sidebar</a>
+                        <a href="#">MENU</a>
                         <div id="close-sidebar" onClick={showSidebar}>
                             <i class="fas fa-times"></i>
                         </div>
@@ -46,13 +70,18 @@ function Navbar() {
                         <div class="user-pic">          
                         </div>
                         <div class="user-info">
-                        <span class="user-name">Jheysson
-                            <strong> Urbano</strong>
+                        <span class="user-name">
+                            {datos_alumno.nombre.split(' ')[0]}
+                            <strong> {datos_alumno.apellido.split(' ')[0]}</strong>
                         </span>
-                        <span class="user-role">Estudiante</span>
+                        <span class="user-role">{datos_alumno.cargo}</span>
                         <span class="user-status">
-                            <i class="fa fa-circle"></i>
+                            {
+                                /*
+                                <i class="fa fa-circle"></i>
                             <span>Online</span>
+                                */
+                            }
                         </span>
                         </div>
                     </div>
@@ -64,14 +93,26 @@ function Navbar() {
                             <ul>
                                 <li class="header-menu">
                                     <span>Información</span>
-                                </li>
-                                
-                                
-                                    
+                                </li>                                                                                                    
                                     {
-                                        SidebarItems.map((item, index) => {
+                                        SidebarAlumnos.map((item, index) => {
                                             return(
-                                                <li class="sidebar-dropdown">
+                                                <li>
+                                                <Link key={index} to ={item.path} >
+                                                    <i class={item.icon}></i>
+                                                    <span>{item.title}</span>
+                                                </Link>
+                                                </li>
+                                            )
+                                        })
+                                    }                                
+                                <li class="header-menu">
+                                    <span>Cursos</span>
+                                </li>
+                                    {                                        
+                                        SidebarCursos.map((item, index) => {
+                                            return(
+                                                <li>
                                                 <Link key={index} to ={item.path} >
                                                     <i class={item.icon}></i>
                                                     <span>{item.title}</span>
@@ -80,119 +121,14 @@ function Navbar() {
                                             )
                                         })
                                     }
-                                <li class="sidebar-dropdown">
-                                    <a href="#">
-                                    <i class="fa fa-shopping-cart"></i>
-                                    <span>E-commerce</span>
-                                    <span class="badge badge-pill badge-danger">3</span>
-                                    </a>
-                                    <div class="sidebar-submenu">
-                                    <ul>
-                                        <li>
-                                        <a href="#">Products
-
-                                        </a>
-                                        </li>
-                                        <li>
-                                        <a href="#">Orders</a>
-                                        </li>
-                                        <li>
-                                        <a href="#">Credit cart</a>
-                                        </li>
-                                    </ul>
-                                    </div>
-                                </li>
-                                <li class="sidebar-dropdown">
-                                    <a href="#">
-                                    <i class="far fa-gem"></i>
-                                    <span>Components</span>
-                                    </a>
-                                    <div class="sidebar-submenu">
-                                    <ul>
-                                        <li>
-                                        <a href="#">General</a>
-                                        </li>
-                                        <li>
-                                        <a href="#">Panels</a>
-                                        </li>
-                                        <li>
-                                        <a href="#">Tables</a>
-                                        </li>
-                                        <li>
-                                        <a href="#">Icons</a>
-                                        </li>
-                                        <li>
-                                        <a href="#">Forms</a>
-                                        </li>
-                                    </ul>
-                                    </div>
-                                </li>
-                                <li class="sidebar-dropdown">
-                                    <a href="#">
-                                    <i class="fa fa-chart-line"></i>
-                                    <span>Charts</span>
-                                    </a>
-                                    <div class="sidebar-submenu">
-                                    <ul>
-                                        <li>
-                                        <a href="#">Pie chart</a>
-                                        </li>
-                                        <li>
-                                        <a href="#">Line chart</a>
-                                        </li>
-                                        <li>
-                                        <a href="#">Bar chart</a>
-                                        </li>
-                                        <li>
-                                        <a href="#">Histogram</a>
-                                        </li>
-                                    </ul>
-                                    </div>
-                                </li>
-                                <li class="sidebar-dropdown">
-                                    <a href="#">
-                                    <i class="fa fa-globe"></i>
-                                    <span>Maps</span>
-                                    </a>
-                                    <div class="sidebar-submenu">
-                                    <ul>
-                                        <li>
-                                        <a href="#">Google maps</a>
-                                        </li>
-                                        <li>
-                                        <a href="#">Open street map</a>
-                                        </li>
-                                    </ul>
-                                    </div>
-                                </li>
-                                <li class="header-menu">
-                                    <span>Extra</span>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                    <i class="fa fa-book"></i>
-                                    <span>Documentation</span>
-                                    <span class="badge badge-pill badge-primary">Beta</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                    <i class="fa fa-calendar"></i>
-                                    <span>Calendar</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                    <i class="fa fa-folder"></i>
-                                    <span>Examples</span>
-                                    </a>
-                                </li>
                             </ul>
                         </div>
                     </div>
                 </div>
                 <div class="sidebar-footer">
-                    <a href="#">
+                    {
+                        /*
+                        <a href="#">
                         <i class="fa fa-bell"></i>
                         <span class="badge badge-pill badge-warning notification">3</span>
                     </a>
@@ -207,11 +143,19 @@ function Navbar() {
                     <a href="#">
                         <i class="fa fa-power-off"></i>
                     </a>
+                        */
+                    }
                 </div>
             </nav>
             <main className="page-content">
             <div className="container-fluid">
-            <h1>WWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW</h1>
+                <Switch>
+                    <Route path='/' exact component={Home}/>
+                    <Route path='/profile'>
+                        <Profile datos_alumno={datos_alumno}/>
+                    </Route>
+                    
+                </Switch>
             </div>
             
         </main>

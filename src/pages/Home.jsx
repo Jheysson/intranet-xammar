@@ -4,7 +4,8 @@ function Home() {
     return (
         <>
             <div className="container">
-                Home
+                HOME <hr/>
+                LUIS FABIO XAMMAR JURADO
             </div> 
         </>
     )
