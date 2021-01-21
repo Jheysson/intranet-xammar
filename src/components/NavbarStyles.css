@@ -405,7 +405,7 @@
   /*-----------------------------chiller-theme-------------------------------------------------*/
   
   .chiller-theme .sidebar-wrapper {
-      background: #0a3d62;
+      background: #0D5181;
   }
   
   .chiller-theme .sidebar-wrapper .sidebar-header,
@@ -458,7 +458,7 @@
   .chiller-theme .sidebar-wrapper .sidebar-menu .sidebar-dropdown div,
   .chiller-theme .sidebar-wrapper .sidebar-search input.search-menu,
   .chiller-theme .sidebar-wrapper .sidebar-search .input-group-text {
-      background: #3a3f48;
+      background: #0D5181;
   }
   
   .chiller-theme .sidebar-wrapper .sidebar-menu .header-menu span {
@@ -466,7 +466,8 @@
   }
   
   .chiller-theme .sidebar-footer {
-      background: #3a3f48;
+      /*3a3f48*/
+      background: #0D5181;
       box-shadow: 0px -1px 5px #282c33;
       border-top: 1px solid #464a52;
   }

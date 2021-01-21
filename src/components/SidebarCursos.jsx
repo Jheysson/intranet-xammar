@@ -1,7 +1,13 @@
 import React from 'react'
 
 const classN = '';
-export const SidebarCursos = [
+export const SidebarCursos = [    
+    {
+        title: 'Cursos',
+        path: '/course',
+        icon: 'fas fa-book',          
+        cName: classN
+    },
     {
         title: 'Horario',
         path: '/schedule',
@@ -10,7 +16,7 @@ export const SidebarCursos = [
     },
     {
         title: 'Notas',
-        path: '/Score',
+        path: '/score',
         icon: 'fa fa-star',
         cName: classN
     }

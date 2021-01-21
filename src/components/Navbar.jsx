@@ -12,9 +12,10 @@ import './template-navbar.css';
 import { IconContext } from 'react-icons';
 
 import Home from '../pages/Home';
-import Reports from '../pages/Reports';
-import Products from '../pages/Products';
 import Profile from '../pages/Profile';
+import Course from '../pages/Course';
+import Schedule from '../pages/Schedule';
+import Score from '../pages/Score';
 function Navbar() {
 
     const datos_alumno = {
@@ -98,7 +99,7 @@ function Navbar() {
                                         SidebarAlumnos.map((item, index) => {
                                             return(
                                                 <li>
-                                                <Link key={index} to ={item.path} >
+                                                <Link key={index} to ={item.path} className="asd" >
                                                     <i class={item.icon}></i>
                                                     <span>{item.title}</span>
                                                 </Link>
@@ -154,7 +155,9 @@ function Navbar() {
                     <Route path='/profile'>
                         <Profile datos_alumno={datos_alumno}/>
                     </Route>
-                    
+                    <Route path='/course' component={Course}/>
+                    <Route path='/schedule' component={Schedule}/>
+                    <Route path='/score' component={Score}/>
                 </Switch>
             </div>
             

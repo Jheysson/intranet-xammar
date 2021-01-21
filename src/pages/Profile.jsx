@@ -1,11 +1,12 @@
 import React from 'react'
+import '../components/template-navbar.css';
 
 const  Profile = ({datos_alumno})=> {
     return (
         <>
             <div className="container">            
                 <div class="card" >                        
-                    <div class="card-header">
+                    <div class="card-header card-head">
                         DATOS DEL ALUMNO
                     </div>
                     <div class="card-body row">
@@ -49,7 +50,7 @@ const  Profile = ({datos_alumno})=> {
                     </div>												
                 </div>
                 <div class="card" >                        
-                    <div class="card-header">
+                    <div class="card-header card-head">
                         DATOS PERSONALES
                     </div>
                     <div class="card-body row">
@@ -92,7 +93,7 @@ const  Profile = ({datos_alumno})=> {
                     </div>												
                 </div>
                 <div class="card" >                        
-                    <div class="card-header">
+                    <div class="card-header card-head">
                         DATOS DE UBICACIÓN Y CONTACTO ACTUAL
                     </div>
                     <div class="card-body row">
@@ -131,7 +132,7 @@ const  Profile = ({datos_alumno})=> {
                     </div>												
                 </div>
                 <div class="card" >                        
-                    <div class="card-header">
+                    <div class="card-header card-head">
                         DATOS DE PROCEDENCIA
                     </div>
                     <div class="card-body row">

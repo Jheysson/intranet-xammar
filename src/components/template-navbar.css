@@ -34,6 +34,19 @@
   margin-left: 0;
 }
 
+table thead{
+  background-color: #0D5181;
+  color: white;
+}
+.card-head{
+  background-color: #0D5181;
+  color: white;
+}
+
+.form-group:hover {
+  background: #D5D8DC;
+}
+
 
 @media (min-width: 768px) {
   #sidebar-wrapper {

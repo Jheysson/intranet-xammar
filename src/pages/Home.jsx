@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Home() {
+const Home = () => {
     return (
         <>
             <div className="container">
@@ -8,7 +8,7 @@ function Home() {
                 LUIS FABIO XAMMAR JURADO
             </div> 
         </>
-    )
+    );
 }
-
-export default Home
+ 
+export default Home;
