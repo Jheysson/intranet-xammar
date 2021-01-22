@@ -39,6 +39,8 @@ const Course = () => {
     return (
         <>
         <div className="container">
+            
+        <h4>CURSOS</h4><hr/>
             <table class="table table-hover">
                 <thead>
                     <tr>

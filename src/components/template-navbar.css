@@ -47,6 +47,10 @@ table thead{
   background: #D5D8DC;
 }
 
+.test {
+  background-color: green !important;
+}
+
 
 @media (min-width: 768px) {
   #sidebar-wrapper {

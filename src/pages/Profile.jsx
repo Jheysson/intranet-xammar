@@ -4,7 +4,8 @@ import '../components/template-navbar.css';
 const  Profile = ({datos_alumno})=> {
     return (
         <>
-            <div className="container">            
+            <div className="container">   
+            <h4>PERFIL DEL ALUMNO</h4><hr/>
                 <div class="card" >                        
                     <div class="card-header card-head">
                         DATOS DEL ALUMNO
