@@ -6,6 +6,7 @@ import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import { SidebarData } from './SidebarData'
 import { SidebarAlumnos } from './SidebarAlumnos'
 import { SidebarCursos } from './SidebarCursos'
+import { SidebarDocentes } from './SidebarDocentes'
 
 import './NavbarStyles.css';
 import './template-navbar.css';
@@ -16,6 +17,8 @@ import Profile from '../pages/Profile';
 import Course from '../pages/Course';
 import Schedule from '../pages/Schedule';
 import Score from '../pages/Score';
+import RegisterScore from '../pages/Register-Score';
+import Attendance from '../pages/Attendance';
 function Navbar() {
 
     const datos_alumno = {
@@ -122,6 +125,22 @@ function Navbar() {
                                             )
                                         })
                                     }
+                                <li className="header-menu">
+                                    <span>Docente</span>
+                                    
+                                </li>
+                                {
+                                        SidebarDocentes.map((item, index) => {
+                                            return(
+                                                <li>
+                                                <Link key={index} to ={item.path} >
+                                                    <i class={item.icon}></i>
+                                                    <span>{item.title}</span>
+                                                </Link>
+                                                </li>
+                                            )
+                                        })
+                                    }
                             </ul>
                         </div>
                     </div>
@@ -158,6 +177,10 @@ function Navbar() {
                     <Route path='/course' component={Course}/>
                     <Route path='/schedule' component={Schedule}/>
                     <Route path='/score' component={Score}/>
+                    
+                    <Route path='/register-score' component={RegisterScore}/>
+                    
+                    <Route path='/attendance' component={Attendance}/>
                 </Switch>
             </div>
             

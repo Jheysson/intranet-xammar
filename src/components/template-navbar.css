@@ -43,7 +43,7 @@ table thead{
   color: white;
 }
 
-.form-group:hover {
+.form-group.cards:hover {
   background: #D5D8DC;
 }
 

@@ -190,7 +190,7 @@ const Schedule = () => {
                                     color: cursos[3].const ? 'white': 'black'}}
                              key={cursos[3].codigo}><center>{cursos[3].acronimo}</center></td>
                     </tr>
-                    <tr>
+                    <tr className= "hover">
                         <td><center>15:45 - 16:05</center></td>
                         <td>
                             <center>
